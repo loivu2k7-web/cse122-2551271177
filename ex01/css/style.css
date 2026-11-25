@@ -1,30 +1,70 @@
 
-/* CSS cho bài tập CSE122 */
+/* 1. Khai báo biến CSS */
+:root {
+    --background-color: #FFFDE7;
+    --border-color: #9E9E9E;
+    --title-color: #D40000;
+    --title-background: #FFD9E6;
+    --blue-color: #0033CC;
+    --red-color: #D40000;
+}
 
+/* 2. Thiết lập chung */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 3. Căn giữa trang bằng Flexbox */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Times New Roman", serif;
 }
 
-header {
-    background-color: #1e3a5f;
-    color: white;
-    padding: 20px;
+/* 4. Khung chứa bài thơ */
+.poem-container {
+    width: min(640px, calc(100% - 32px));
+    padding: 24px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
     text-align: center;
 }
 
-main {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
+/* 5. Tiêu đề */
+h1 {
+    margin-bottom: 18px;
+    padding: 6px 0;
+    color: var(--title-color);
+    background-color: var(--title-background);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* 6. Định dạng các khổ thơ */
+.stanza {
+    margin: 0;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/* 7. Màu sắc từng khổ */
+.blue {
+    color: var(--blue-color);
+}
+
+.red {
+    color: var(--red-color);
+}
+
+/* 8. Đường kẻ phân cách */
+hr {
+    width: 55%;
+    margin: 14px auto;
+    border: none;
+    border-top: 1px solid var(--blue-color);
 }
